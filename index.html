@@ -98,6 +98,44 @@
                     <img alt="git status suggestions" src="img/gif/git-st-suggestions.gif"/>
                 </section>
             </section>
+            <section>
+                <h2>The <code>git commit</code> workflow</h2>
+                <ul>
+                    <li>Each commit is a patch</li>
+                    <li>You must prepare a commit before finalizing it</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <p><code>git add</code> stages changes</p>
+                    <img alt="git add" src="img/gif/git-add.gif"/>
+                    <p><small>Stage relevant changes together</small></p>
+                </section>
+                <section>
+                    <p><code>git add -p</code> let's you add parts of a file.</p>
+                    <img alt="git add -p" src="img/gif/git-add-p.gif"/>
+                </section>
+            </section>
+            <section>
+                <p><code>git commit</code> adds a change to the history</p>
+                <img alt="git commit" src="img/gif/git-commit.gif"/>
+                <p><small>Apply all of your staged changes.</small></p>
+                <p class="fragment"><small><code>esc :x</code></small></p>
+            </section>
+            <section>
+                <p><code>git commit</code> takes a message that describes the patch. Writing a good message is <i>key</i>:</p>
+                <small class="fragment" data-fragment="1">
+                    <ul>
+                        <li>Write in present imperative, for example:</li>
+                        <ul>
+                            <li><code>Add README.md to describe project</code></li>
+                            <li><code>Implement improved error handling, fixes #13</code></li>
+                        </ul>
+                        <li class="fragment" data-fragment="2">Think of commit messages like emails</li>
+                        <li class="fragment" data-fragment="2">Describe not just what, but why</li>
+                    </ul>
+                </small>
+            </section>
         </article>
     </main>
     <script src="lib/js/head.min.js"></script>
