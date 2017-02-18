@@ -53,6 +53,9 @@
                 <img class="stretch" alt="bad version control" src="img/bad-VC.png"/>
             </section>
             <section>
+                <h1>Up and Running</h1>
+            </section>
+            <section>
                 <section>
                     <h1>Installation</h1>
                     <p><a target="external" href="https://git-scm.com/download/win">git-scm.com/download/<b>win</b></a></p>
@@ -96,7 +99,16 @@
                 <h1>Using <code>git</code> as a standalone developer</h1>
             </section>
             <section>
-                <h1>Creating a Repository</h1>
+                <h1>A mental model for staging</h1>
+                <p>You don't want to make a commitment until everything is ready.</p>
+            </section>
+            <section>
+                <h2>The <code>git commit</code> workflow</h2>
+                <ul>
+                    <li>Each commit is a patch</li>
+                    <li>You must prepare a commit before finalizing it</li>
+                    <li>Each commit is a unit of work, put related changes together.</li>
+                </ul>
             </section>
             <section>
                 <p>A git repository is a directory on your computer.</p>
@@ -105,7 +117,7 @@
             </section>
             <section>
                 <section>
-                    <p><code>git status</code> shows how your repository has changed since the last point in your history.</p>
+                    <p><code>git status</code> shows the status of your repository.</p>
                     <img alt="git status" src="img/gif/git-status-hello-world.gif"/>
                 </section>
                 <section>
@@ -114,11 +126,8 @@
                 </section>
             </section>
             <section>
-                <h2>The <code>git commit</code> workflow</h2>
-                <ul>
-                    <li>Each commit is a patch</li>
-                    <li>You must prepare a commit before finalizing it</li>
-                </ul>
+                <p><code>git diff</code> shows untracted changes inside your files</p>
+                <img alt="git diff" src="img/gif/git-diff.gif"/>
             </section>
             <section>
                 <section>
@@ -132,10 +141,13 @@
                 </section>
             </section>
             <section>
+                <p><code>git reset HEAD -- </code> unstages changes</p>
+                <img alt="git reset HEAD --" src="img/gif/git-reset-HEAD.gif"/>
+            </section>
+            <section>
                 <p><code>git commit</code> adds a change to the history</p>
                 <img alt="git commit" src="img/gif/git-commit.gif"/>
-                <p><small>Apply all of your staged changes.</small></p>
-                <p class="fragment"><small><code>esc :x</code></small></p>
+                <p><small>Apply all of your staged changes.  <code>esc :x</code> leaves the editor.</small></p>
             </section>
             <section>
                 <p><code>git commit</code> takes a message that describes the patch. Writing a good message is <i>key</i>:</p>
@@ -150,6 +162,96 @@
                         <li class="fragment" data-fragment="2">Describe not just what, but why</li>
                     </ul>
                 </small>
+            </section>
+            <section>
+                <p><code>git log</code> shows your past changes.</p>
+                <img alt="git log" src="img/gif/git-log.gif"/>
+            </section>
+            <section>
+                <p><code>git revert</code> undoes changes</p>
+                <img alt="git revert" src="img/gif/git-revert.gif"/>
+            </section>
+            <section id="participant">
+                <h1>Using <code>git</code> as a participant</h1>
+            </section>
+            <section>
+                <h2><code>git</code> is distrubuted version control.</h2>
+                <p>Different participants in a project can share changes between each-other</p>
+            </section>
+            <section>
+                <p><code>git branch</code> lets you work on changes in isolation</p>
+                <img alt="git branch" src="img/gif/git-branch.gif"/>
+                <p>One feature to rule them all!</p>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for branches</h2>
+                    <p>Like a branch on a family tree.</p>
+                </section>
+                <section>
+                    <p><b>NOTE</b>: checking out a branch changes the files in your repository.</p>
+                    <p><code>git stash</code> let's you save changes for later</p>
+                    <img alt="git stash" src="img/gif/git-stash-save.gif"/>
+                </section>
+                <section>
+                    <p>To bring changes back from your stash: <code>git stash apply</code></p>
+                    <img alt="git stash apply" src="img/gif/git-stash-apply.gif"/>
+                </section>
+            </section>
+            <section>
+                <h1>Manipulating Branches</h1>
+            </section>
+            <section>
+                <h2>How do I get changes from one branch to another?</h2>
+                <ul class="fragment">
+                    <li><code>git merge</code></li>
+                    <li><code>git rebase</code></li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for merging</h2>
+                    <p>Integrate changes</p>
+                </section>
+                <section>
+                    <img src="img/png/a-commit.png"/>
+                </section>
+                <section>
+                    <img src="img/png/a-branch.png"/>
+                </section>
+                <section>
+                    <img src="img/png/another-commit.png"/>
+                </section>
+                <section>
+                    <img src="img/png/a-merge.png"/>
+                </section>
+                <section>
+                    <p>Sometimes git can fast-forward</p>
+                    <img src="img/png/pre-fast-forward.png"/>
+                </section>
+                <section>
+                    <img src="img/png/fast-forward.png"/>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for rebase</h2>
+                    <p>Transplant branches of a tree</p>
+                </section>
+                <section>
+                    <img src="img/png/pre-rebase.png"/>
+                </section>
+                <section>
+                    <img src="img/png/post-rebase.png"/>
+                </section>
+            </section>
+            <section>
+                <h2>Now to the GitHub part!</h2>
+                <h2>Let's get interactive!</h2>
+                <p><small>Sign up at <a href="https://github.com/join">GitHub.com/join</a></small></p>
+            </section>
+            <section id="feedback">
+                <h1><a href="https://github.com/Lionex/github-workshop/issues/3">Feedback!!!!</a></h1>
             </section>
         </article>
     </main>
