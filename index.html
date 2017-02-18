@@ -1,0 +1,265 @@
+<html>
+<head>
+    <title>Git &amp; GitHub workshop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/lofman.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<body>
+    <main class="reveal">
+        <article class="slides">
+            <section>
+                <h1>Git &amp; GitHub</h1>
+                <h3>Getting Started Workshop</h3>
+                <p><small>by Gwen Lofman</small></p>
+            </section>
+            <section>
+                <section>
+                    <p>Get the slides at<br/><a href="https://hackfsu.com/links">hackfsu.com/links/</a></p>
+                </section>
+                <section>
+                    <p><b>This is a basement slide.</b></p>
+                    <p>You can find all kinds of goodies in the basement slides!</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Scope</h2>
+                    <ul>
+                        <li>up and running with <code>git</code></li>
+                        <li><code>git</code> as a standalone user</li>
+                        <li><code>git</code> as a participant</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Command Syntax</h2>
+                    <p><code>command</code> <code class="fragment">subcommand</code> <code class="fragment">-o</code> <code class="fragment">--option</code></p>
+                </section>
+                <section>
+                    <h2>Navigating the file system</h2>
+                    <ul>
+                        <li><code>cd</code> - change directory</li>
+                        <li><code>ls</code> - list files &amp; directories</li>
+                        <li><code>mkdir</code> - make directory</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2>What is <code>git</code>?</h2>
+            </section>
+            <section>
+                <img class="stretch" alt="bad version control" src="img/bad-VC.png"/>
+            </section>
+            <section>
+                <h1>Up and Running</h1>
+            </section>
+            <section>
+                <section>
+                    <h1>Installation</h1>
+                    <p><a target="external" href="https://git-scm.com/download/win">git-scm.com/download/<b>win</b></a></p>
+                    <p><a target="external" href="https://git-scm.com/download/mac">git-scm.com/download/<b>mac</b></a></p>
+                    <p><a target="external" href="https://git-scm.com/download/linux">git-scm.com/download/<b>linux</b></a></p>
+                    <p class="fragment fade-up"><small><i>Linux usually comes with <code>git</code> installed</i></small></p>
+                </section>
+                <section>
+                    <h1>Linux</h1>
+                    <small><h2>(Ubuntu/Debian)</h2></small>
+                    <img alt="`sudo apt-get install git`" src="img/gif/linux-install-git.gif"/>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Getting Help</h1>
+                    <p><small><code>git help</code> or documentation at <a target="external" href="https://git-scm.com/doc">git-scm.com/doc</a></small></p>
+                    <img alt="git help" src="img/gif/git-help.gif"/>
+                </section>
+                <section>
+                    <p>You can get help for individual commands with<br/><code>git help [command]</code></p>
+                    <img alt="git help status" src="img/gif/git-help-status.gif"/>
+                </section>
+                <section>
+                    <p>Git also has an extensive manual with<br/><code>man git</code></p>
+                    <img alt="man git" src="img/gif/man-git.gif"/>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Configuration</h1>
+                    <p><small><code>git</code> needs to know who you are.</small></p>
+                    <img alt="git config --global user.name [name] &amp;&amp; git config --global user.email [email]" src="img/gif/git-config-user.gif"/>
+                </section>
+                <section>
+                    <h2>Why does <code>git</code> need my name?</h2>
+                    <p>Git associates every change with a name and email so you can tell who changed what.</p>
+                </section>
+            </section>
+            <section id="standalone">
+                <h1>Using <code>git</code> as a standalone developer</h1>
+            </section>
+            <section>
+                <h1>A mental model for staging</h1>
+                <p>You don't want to make a commitment until everything is ready.</p>
+            </section>
+            <section>
+                <h2>The <code>git commit</code> workflow</h2>
+                <ul>
+                    <li>Each commit is a patch</li>
+                    <li>You must prepare a commit before finalizing it</li>
+                    <li>Each commit is a unit of work, put related changes together.</li>
+                </ul>
+            </section>
+            <section>
+                <p>A git repository is a directory on your computer.</p>
+                <img alt="git init" src="img/gif/git-init.gif"/>
+                <p><small>Your <b><code>.git</code></b> folder holds the internals of git.</small></p>
+            </section>
+            <section>
+                <section>
+                    <p><code>git status</code> shows the status of your repository.</p>
+                    <img alt="git status" src="img/gif/git-status-hello-world.gif"/>
+                </section>
+                <section>
+                    <p><code>git status</code> gives suggestions about what to do next.</p>
+                    <img alt="git status suggestions" src="img/gif/git-st-suggestions.gif"/>
+                </section>
+            </section>
+            <section>
+                <p><code>git diff</code> shows untracted changes inside your files</p>
+                <img alt="git diff" src="img/gif/git-diff.gif"/>
+            </section>
+            <section>
+                <section>
+                    <p><code>git add</code> stages changes</p>
+                    <img alt="git add" src="img/gif/git-add.gif"/>
+                    <p><small>Stage relevant changes together</small></p>
+                </section>
+                <section>
+                    <p><code>git add -p</code> let's you add parts of a file.</p>
+                    <img alt="git add -p" src="img/gif/git-add-p.gif"/>
+                </section>
+            </section>
+            <section>
+                <p><code>git reset HEAD -- </code> unstages changes</p>
+                <img alt="git reset HEAD --" src="img/gif/git-reset-HEAD.gif"/>
+            </section>
+            <section>
+                <p><code>git commit</code> adds a change to the history</p>
+                <img alt="git commit" src="img/gif/git-commit.gif"/>
+                <p><small>Apply all of your staged changes.  <code>esc :x</code> leaves the editor.</small></p>
+            </section>
+            <section>
+                <p><code>git commit</code> takes a message that describes the patch. Writing a good message is <i>key</i>:</p>
+                <small class="fragment" data-fragment="1">
+                    <ul>
+                        <li>Write in present imperative, for example:</li>
+                        <ul>
+                            <li><code>Add README.md to describe project</code></li>
+                            <li><code>Implement improved error handling, fixes #13</code></li>
+                        </ul>
+                        <li class="fragment" data-fragment="2">Think of commit messages like emails</li>
+                        <li class="fragment" data-fragment="2">Describe not just what, but why</li>
+                    </ul>
+                </small>
+            </section>
+            <section>
+                <p><code>git log</code> shows your past changes.</p>
+                <img alt="git log" src="img/gif/git-log.gif"/>
+            </section>
+            <section>
+                <p><code>git revert</code> undoes changes</p>
+                <img alt="git revert" src="img/gif/git-revert.gif"/>
+            </section>
+            <section id="participant">
+                <h1>Using <code>git</code> as a participant</h1>
+            </section>
+            <section>
+                <h2><code>git</code> is distrubuted version control.</h2>
+                <p>Different participants in a project can share changes between each-other</p>
+            </section>
+            <section>
+                <p><code>git branch</code> lets you work on changes in isolation</p>
+                <img alt="git branch" src="img/gif/git-branch.gif"/>
+                <p>One feature to rule them all!</p>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for branches</h2>
+                    <p>Like a branch on a family tree.</p>
+                </section>
+                <section>
+                    <p><b>NOTE</b>: checking out a branch changes the files in your repository.</p>
+                    <p><code>git stash</code> let's you save changes for later</p>
+                    <img alt="git stash" src="img/gif/git-stash-save.gif"/>
+                </section>
+                <section>
+                    <p>To bring changes back from your stash: <code>git stash apply</code></p>
+                    <img alt="git stash apply" src="img/gif/git-stash-apply.gif"/>
+                </section>
+            </section>
+            <section>
+                <h1>Manipulating Branches</h1>
+            </section>
+            <section>
+                <h2>How do I get changes from one branch to another?</h2>
+                <ul class="fragment">
+                    <li><code>git merge</code></li>
+                    <li><code>git rebase</code></li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for merging</h2>
+                    <p>Integrate changes</p>
+                </section>
+                <section>
+                    <img src="img/png/a-commit.png"/>
+                </section>
+                <section>
+                    <img src="img/png/a-branch.png"/>
+                </section>
+                <section>
+                    <img src="img/png/another-commit.png"/>
+                </section>
+                <section>
+                    <img src="img/png/a-merge.png"/>
+                </section>
+                <section>
+                    <p>Sometimes git can fast-forward</p>
+                    <img src="img/png/pre-fast-forward.png"/>
+                </section>
+                <section>
+                    <img src="img/png/fast-forward.png"/>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>A mental model for rebase</h2>
+                    <p>Transplant branches of a tree</p>
+                </section>
+                <section>
+                    <img src="img/png/pre-rebase.png"/>
+                </section>
+                <section>
+                    <img src="img/png/post-rebase.png"/>
+                </section>
+            </section>
+            <section>
+                <h2>Now to the GitHub part!</h2>
+                <h2>Let's get interactive!</h2>
+                <p><small>Sign up at <a href="https://github.com/join">GitHub.com/join</a></small></p>
+            </section>
+            <section id="feedback">
+                <h1><a href="https://github.com/Lionex/github-workshop/issues/3">Feedback!!!!</a></h1>
+            </section>
+        </article>
+    </main>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize()
+        Reveal.configure({ slideNumber: 'h.v' });
+    </script>
+</body>
+</html>
