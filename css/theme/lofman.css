@@ -143,6 +143,10 @@ body {
 .reveal q {
   font-style: italic; }
 
+.reveal code,
+.reveal pre {
+  text-transform: none;}
+
 .reveal pre {
   display: block;
   position: relative;
