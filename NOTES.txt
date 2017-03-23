@@ -1,0 +1,5 @@
+mention
+git config --global --edit
+
+and how to exit vim
+[ESC] + ":wq"
